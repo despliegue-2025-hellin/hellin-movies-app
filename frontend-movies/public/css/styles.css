@@ -1,0 +1,262 @@
+/* ===========================
+   ESTILO GENERAL - HELLÍN MOVIES
+   =========================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #0a0a12;
+    background-image:
+        radial-gradient(ellipse at top, rgba(99, 52, 156, 0.15), transparent),
+        radial-gradient(ellipse at bottom, rgba(200, 50, 50, 0.08), transparent);
+    color: #d4d0e8;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    margin: 20px 0;
+    letter-spacing: 4px;
+    color: #e8c547;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 8px rgba(232, 197, 71, 0.5),
+        0 0 20px rgba(200, 50, 50, 0.3),
+        2px 2px 4px rgba(0, 0, 0, 0.8);
+    border-bottom: 3px solid #e8c547;
+    padding-bottom: 15px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===========================
+   GRID DE PELÍCULAS
+   =========================== */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 30px;
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* ===========================
+   TARJETAS DE PELÍCULA
+   =========================== */
+
+.card {
+    background: linear-gradient(135deg, rgba(15, 12, 25, 0.95), rgba(30, 20, 50, 0.9));
+    border-radius: 12px;
+    border: 2px solid rgba(232, 197, 71, 0.3);
+    box-shadow:
+        0 0 12px rgba(99, 52, 156, 0.3),
+        0 0 24px rgba(0, 0, 0, 0.5),
+        inset 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.03) translateY(-5px);
+    border-color: #e8c547;
+    box-shadow:
+        0 0 20px rgba(232, 197, 71, 0.4),
+        0 0 35px rgba(99, 52, 156, 0.4),
+        0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.card-poster {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1030, #2a1540);
+    border-bottom: 2px solid rgba(232, 197, 71, 0.2);
+}
+
+.genre-emoji {
+    font-size: 72px;
+    filter: drop-shadow(0 0 10px rgba(232, 197, 71, 0.5));
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card .name {
+    font-size: 20px;
+    color: #e8c547;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 6px rgba(232, 197, 71, 0.4);
+    margin-bottom: 8px;
+}
+
+.card p {
+    margin: 6px 0;
+    color: #b0a8c8;
+    font-size: 14px;
+}
+
+.card p strong {
+    color: #d4b8e8;
+}
+
+.card .rating {
+    font-size: 16px;
+    color: #e8c547;
+    font-weight: bold;
+}
+
+.card a {
+    color: #c875e8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.card a:hover {
+    color: #e8c547;
+    text-decoration: underline;
+}
+
+/* ===========================
+   DETALLE DE PELÍCULA
+   =========================== */
+
+.back-link {
+    padding: 20px 30px;
+}
+
+.back-link a {
+    color: #c875e8;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    color: #e8c547;
+}
+
+.movie-detail {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(15, 12, 25, 0.95), rgba(30, 20, 50, 0.9));
+    border-radius: 12px;
+    border: 2px solid rgba(232, 197, 71, 0.3);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+}
+
+.movie-header h2 {
+    color: #e8c547;
+    font-size: 32px;
+    margin: 0 0 15px;
+    text-shadow: 0 0 8px rgba(232, 197, 71, 0.4);
+}
+
+.movie-meta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #b0a8c8;
+}
+
+.synopsis {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #c4bce0;
+    font-style: italic;
+    border-left: 3px solid #e8c547;
+    padding-left: 15px;
+    margin: 15px 0;
+}
+
+.movie-detail h3 {
+    color: #d4b8e8;
+    font-size: 22px;
+    margin: 25px 0 15px;
+    border-bottom: 2px solid rgba(200, 184, 232, 0.2);
+    padding-bottom: 8px;
+}
+
+/* ===========================
+   GRID DE ACTORES
+   =========================== */
+
+.actors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.actor-card {
+    background: rgba(25, 18, 45, 0.8);
+    border: 1px solid rgba(200, 117, 232, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.actor-card:hover {
+    transform: translateY(-3px);
+    border-color: #c875e8;
+}
+
+.actor-avatar {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.actor-name {
+    color: #e8c547;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.actor-role {
+    color: #b0a8c8;
+    font-size: 13px;
+}
+
+.actor-role em {
+    color: #c875e8;
+}
+
+/* ===========================
+   ERRORES Y ESTADOS
+   =========================== */
+
+.error-box {
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background: rgba(200, 50, 50, 0.15);
+    border: 2px solid rgba(200, 50, 50, 0.4);
+    border-radius: 10px;
+    text-align: center;
+    color: #e8a0a0;
+    font-size: 16px;
+}
+
+.no-data {
+    text-align: center;
+    color: #8880a0;
+    font-style: italic;
+    padding: 20px;
+}
